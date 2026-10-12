@@ -1,0 +1,605 @@
+/* CSS reset and box sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Full page background with fixed bookstore photo */
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #f7f2ea;
+  background-color: #1a100a;
+  background-image: linear-gradient(rgba(18, 11, 7, 0.72), rgba(18, 11, 7, 0.78)), url('./bookstore-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Main page wrapper to center content */
+.page-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 20px 80px 20px;
+}
+
+/* Typography styles */
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', Georgia, serif;
+  letter-spacing: 0.04em;
+  color: #fff9f0;
+}
+
+/* Reusable vintage semi transparent card style */
+.auth-card,
+.dashboard-container,
+.profile-card,
+.progress-card,
+.book-card,
+.empty-state-card {
+  background: rgba(30, 19, 13, 0.88);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* SECTION 1: AUTHENTICATION SCREEN */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 36px 32px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e5c158;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: #d8c8b4;
+}
+
+/* Google Demo button styling */
+.social-auth-box {
+  margin-bottom: 20px;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background-color: #fffcf7;
+  color: #2b1b12;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background-color: #f2e9db;
+}
+
+/* Form dividing line */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #a8947f;
+  font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.divider span {
+  padding: 0 12px;
+}
+
+/* Form block */
+.form-block {
+  margin-top: 10px;
+}
+
+.form-title {
+  font-size: 1.35rem;
+  color: #f7e7c4;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 8px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #e8dbcb;
+}
+
+.form-group input {
+  padding: 11px 14px;
+  background: rgba(18, 11, 7, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 6px;
+  color: #fff9f0;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #e5c158;
+  box-shadow: 0 0 0 2px rgba(229, 193, 88, 0.25);
+}
+
+.form-group input::placeholder {
+  color: #8c7965;
+}
+
+/* Primary submit button */
+.submit-btn {
+  margin-top: 8px;
+  padding: 12px 20px;
+  background: #a36f2a;
+  color: #fff9f0;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.submit-btn:hover {
+  background: #b57d32;
+}
+
+/* Links to switch between forms */
+.switch-link-box {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #c9b9a6;
+}
+
+.switch-link {
+  color: #e5c158;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
+
+.form-separator {
+  height: 1px;
+  background: rgba(212, 175, 55, 0.25);
+  margin: 32px 0 28px 0;
+}
+
+/* SECTION 2: DASHBOARD */
+.dashboard-container {
+  padding: 32px;
+}
+
+/* Navigation bar */
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.nav-brand .nav-logo {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e5c158;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-link {
+  color: #d8c8b4;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  color: #fff9f0;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.nav-link.active {
+  color: #e5c158;
+  border-bottom: 2px solid #e5c158;
+  font-weight: 600;
+}
+
+/* Download action button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #a36f2a, #7d501c);
+  color: #fff9f0;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #b57d32, #8f5d22);
+}
+
+.download-icon {
+  font-size: 0.95rem;
+}
+
+.section-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Profile Area */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: rgba(20, 12, 8, 0.65);
+  margin-bottom: 32px;
+}
+
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #543722;
+  border: 2px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar-initials {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff9f0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  color: #fff9f0;
+}
+
+.profile-email {
+  font-size: 0.88rem;
+  color: #c9b9a6;
+}
+
+.profile-status {
+  font-size: 0.8rem;
+  color: #e5c158;
+  font-weight: 500;
+}
+
+/* Common section layout in dashboard */
+.dashboard-section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #e5c158;
+}
+
+.section-meta {
+  font-size: 0.85rem;
+  color: #bfaea0;
+}
+
+/* Reading Progress Area */
+.progress-card {
+  padding: 20px 24px;
+  background: rgba(22, 13, 8, 0.65);
+}
+
+.progress-book-info {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.progress-book-cover {
+  width: 50px;
+  height: 70px;
+  background: #361f14;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progress-book-cover .cover-text {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  color: #e5c158;
+  font-size: 1rem;
+}
+
+.progress-book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progress-book-details .book-title {
+  font-size: 1.1rem;
+  color: #fff9f0;
+}
+
+.progress-book-details .book-author {
+  font-size: 0.88rem;
+  color: #c9b9a6;
+}
+
+.progress-stats {
+  font-size: 0.85rem;
+  color: #e5c158;
+  font-weight: 500;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(18, 11, 7, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #996515, #d4af37);
+  border-radius: 5px;
+}
+
+.progress-bar-fill.sample-progress {
+  width: 43%;
+}
+
+/* Book Collection Area */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: rgba(22, 13, 8, 0.7);
+}
+
+.cover-box {
+  height: 190px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  margin-bottom: 14px;
+}
+
+.cover-burgundy {
+  background: linear-gradient(135deg, #421217, #240a0d);
+}
+
+.cover-forest {
+  background: linear-gradient(135deg, #132b1d, #08170f);
+}
+
+.cover-navy {
+  background: linear-gradient(135deg, #162438, #0a111c);
+}
+
+.cover-amber {
+  background: linear-gradient(135deg, #452b12, #211306);
+}
+
+.cover-motif {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e5c158;
+}
+
+.cover-roman {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.6rem;
+  color: rgba(247, 242, 234, 0.3);
+  align-self: flex-end;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.book-info .book-title {
+  font-size: 0.98rem;
+  color: #fff9f0;
+  margin-bottom: 4px;
+}
+
+.book-info .book-author {
+  font-size: 0.84rem;
+  color: #bfaea0;
+  margin-bottom: 14px;
+}
+
+.book-actions {
+  margin-top: auto;
+}
+
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(46, 30, 20, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+  color: #e5c158;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  background: rgba(74, 48, 32, 0.9);
+  border-color: #e5c158;
+}
+
+.fav-icon {
+  font-size: 0.85rem;
+}
+
+/* Empty State Card */
+.empty-state-card {
+  padding: 32px 24px;
+  text-align: center;
+  background: rgba(20, 12, 8, 0.55);
+}
+
+.empty-icon {
+  font-size: 1.8rem;
+  color: #c59b27;
+  margin-bottom: 10px;
+}
+
+.empty-message {
+  font-size: 0.95rem;
+  color: #c9b9a6;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Responsive styles for tablets and phones */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 24px 14px 60px 14px;
+  }
+
+  .auth-card {
+    padding: 28px 20px;
+  }
+
+  .brand-title {
+    font-size: 2.1rem;
+  }
+
+  .dashboard-container {
+    padding: 20px 16px;
+  }
+
+  .dashboard-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+
+  .cover-box {
+    height: 160px;
+  }
+}
